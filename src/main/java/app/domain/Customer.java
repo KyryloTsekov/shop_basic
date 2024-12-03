@@ -12,6 +12,16 @@ public class Customer {
     private boolean active;
     private List<Product> products = new ArrayList<>();
 
+    public Customer(String name, boolean active) {
+        this.name = name;
+        this.active = active;
+    }
+
+    public Customer(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     // Метод, который добавляет один продукт в корзину покупателя.
     public void addProduct(Product product) {
        if (product.isActive()) {
